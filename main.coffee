@@ -56,7 +56,8 @@ pluck = (context, frequency=220, impulseDuration=0.01) ->
   , 10000
 
 document.addEventListener "mousedown", (e) ->
-  frequency = (1 + e.pageX / document.body.clientWidth) * 220
-  impulseDuration = (1 - e.pageY / document.body.clientHeight) * 0.025
+  octaves = 3
+  frequency = (1 + octaves * e.pageX / document.body.clientWidth) * 220
+  impulseDuration = (1 - e.pageY / document.body.clientHeight) * 0.0075 + 0.0005
 
   pluck(context, frequency, impulseDuration)
