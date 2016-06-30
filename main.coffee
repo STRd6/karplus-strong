@@ -22,11 +22,8 @@ viz = Viz(analyser)
 
 updateViz = ->
   viz.draw(canvas)
-
   requestAnimationFrame updateViz
-
 requestAnimationFrame updateViz
-  
 
 # http://stackoverflow.com/a/14487961/68210
 pluck = (context, frequency=220, impulseDuration=0.01) ->
